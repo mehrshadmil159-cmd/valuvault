@@ -1,0 +1,71 @@
+# Environment variables
+.env
+.env.local
+.env*.local
+*.env
+
+# Dependencies
+node_modules/
+packages/*/node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+packages/*/dist/
+packages/*/build/
+packages/*/.next/
+packages/*/out/
+
+# Cache
+.cache/
+.turbo/
+.tsbuildinfo
+*.tsbuildinfo
+packages/*/.turbo/
+packages/*/.cache/
+packages/*/*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+packages/*/coverage/
+.nyc_output
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+tmp*
+temp/
+
+# Artifacts
+artifacts/
+cache/
+packages/hardhat/artifacts/
+packages/hardhat/cache/
+packages/hardhat/deployments/*/solcInputs/
+
+# NPX package folders (these are published separately as npm packages)
+create-fhevm-nextjs/
+create-fhevm-react/
+create-fhevm-vue/
+
+# Vercel
+.vercel
+
+# Railway
+.railway
