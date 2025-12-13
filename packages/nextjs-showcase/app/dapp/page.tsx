@@ -194,8 +194,12 @@ export default function DAppPage() {
       );
 
       const decryptedValue = decryptedResults[encryptedHandle];
-      console.log('✅ Decrypted result:', decryptedValue);
-      setResult(decryptedValue);
+      // Convert BigInt to Number if necessary
+      const numericResult = typeof decryptedValue === 'bigint' 
+        ? Number(decryptedValue) 
+        : Number(decryptedValue);
+      console.log('✅ Decrypted result:', decryptedValue, '-> numeric:', numericResult);
+      setResult(numericResult);
     } catch (e: any) {
       console.error('❌ Decrypt error:', e);
       setError(e.message || 'Failed to decrypt result');
